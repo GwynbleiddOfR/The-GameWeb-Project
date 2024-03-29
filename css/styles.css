@@ -17,6 +17,13 @@ body{
 .icon-cart{
     width: 40px;
     height: 40px;
+    margin-right: 10px;
+}
+
+.icon-user{
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
 }
 
 img{
