@@ -45,10 +45,6 @@ header{
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
 }
 
-.info-game{
-    padding: 15px 30px;
-}
-
 .item img{
     width: 100%;
     height: 300px;
@@ -56,3 +52,23 @@ header{
     border-radius: 10px 10px 0 0;
 }
 
+.info-game{
+    padding: 15px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.price{
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.info-game button{
+    border: none;
+    background: none;
+    background-color: black;
+    color: #fff;
+    padding: 15px 10px;
+    cursor: pointer;
+}
