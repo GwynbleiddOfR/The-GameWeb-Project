@@ -1,28 +1,138 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>descripcion</title>
-    <link rel="stylesheet" href="css/descGame.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>descripcion</title>
+  <link rel="stylesheet" href="css/descGame.css">
 </head>
+
 <body>
-    <header>
-        <div class="header">
-            <a href="#default" class="logo">CompanyLogo</a>
-            <div class="header-right">
-              <a class="active" href="#home">Carro</a>
-              <a href="#about">inicio secion</a>
-            </div>
-          </div>
-    </header>
+  <header>
+    <div class="header">
+      <a href="#default" class="logo">CompanyLogo</a>
+      <div class="header-right">
+        <a class="active" href="#home">Carro</a>
+        <a href="#about">inicio sesion</a>
+      </div>
+    </div>
+  </header>
 
-    <section>
+  <section>
+    <article>
+      <div class="imagen">
+        <img src="imagen/medievil.gif" alt="medievil">
+        <p>Medievil 2 </p>
+        <p>$5500</p>
+      </div>
 
-    </section>
+      <div class="boton">
+        <button class="boton">-</button>
+        <label for="fandom">1</label>
+        <button class="boton">+</button>
+      </div>
+      <div class="info">
+        <p>Genero:</p>
+        <p>Desarrollador:</p>
+        <p>Fecha de lanzamiento:</p>
+      </div>
+    </article>
 
-    <footer>
+    <div class="desc-imagen">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod tempora magni accusamus voluptatem tempore quo
+        quasi iste exercitationem hic quidem asperiores fuga tenetur, aut, sunt, esse praesentium? Nihil, in sit!</p>
+    </div>
 
-    </footer>
+
+    <div class="slideshow-container">
+
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <img src="imagen/mv2-3.jfif" style="width:100%">
+        <div class="text">Caption Text</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="imagen/mv2-2.jfif" style="width:100%">
+        <div class="text">Caption Two</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img src="imagen/medievil.jpg" style="width:100%">
+        <div class="text">Caption Three</div>
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+
+    </div>
+    <br>
+
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+    <script>
+      let slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = slides.length }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+      }
+    </script>
+
+
+    <div class="desc-video">
+      <h3>Descripcion</h3>
+      <iframe width="653" height="522" src="https://www.youtube.com/embed/4-OpHydgiMU" title="MediEvil 2 trailer (PS1)"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione nulla voluptatum obcaecati libero harum quae
+        tempora debitis sunt doloremque distinctio. Quaerat laborum nisi dolor omnis eveniet dicta assumenda optio
+        quisquam? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore nisi temporibus suscipit ad totam
+        placeat cupiditate, voluptatibus ducimus error non repellendus consequatur porro, reprehenderit voluptatem
+        quidem.
+        Voluptatibus assumenda minus soluta. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate,
+        explicabo. Unde ullam culpa modi? Sunt saepe minus qui velit! Id, vel! Reprehenderit quis, alias debitis est
+        ipsum
+        omnis dicta possimus? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam laborum, harum ipsa aut
+        ipsum obcaecati molestias officia dolorem reiciendis animi, voluptatum expedita fugiat. Et fugiat culpa optio
+        delectus saepe unde?</p>
+    </div>
+
+  </section>
+
+
+  <footer>
+
+  </footer>
 </body>
+
 </html>
