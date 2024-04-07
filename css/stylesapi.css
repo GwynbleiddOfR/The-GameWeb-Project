@@ -1,9 +1,16 @@
-.btn-outline-success {
-    color: #007bff; /* Cambia el texto al color primario */
-    border-color: #007bff; /* Cambia el borde al color primario */
-  }
+.navbar{
+    box-shadow: 0 3px 9px 3px rgba(0, 0, 0, 0.1);
+}
 
-.btn-outline-success:hover {
-    background-color: #007bff; /* Color primario de Bootstrap */
-    border-color: #007bff; /* Borde del mismo color */
-  }
+.active-filter-btn{
+    background-color: blue !important;
+    color: white !important;
+    border-color: black;
+}
+
+.collection-list button{
+    background-color: blue !important;
+    color: white !important;
+    border-color: black;
+    
+}
