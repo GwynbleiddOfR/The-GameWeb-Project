@@ -1,0 +1,9 @@
+.btn-outline-success {
+    color: #007bff; /* Cambia el texto al color primario */
+    border-color: #007bff; /* Cambia el borde al color primario */
+  }
+
+.btn-outline-success:hover {
+    background-color: #007bff; /* Color primario de Bootstrap */
+    border-color: #007bff; /* Borde del mismo color */
+  }
