@@ -3,14 +3,25 @@
 }
 
 .active-filter-btn{
+    background-color: white!important;
+    color: blue !important;
+    border-color: blue;
+    transition: background-color 0.3s;
+}
+
+.active-filter-btn:hover{
     background-color: blue !important;
     color: white !important;
-    border-color: black;
 }
 
 .collection-list button{
+    background-color: white !important;
+    color: blue !important;
+    border-color: blue;
+    transition: background-color 0.3s;
+}
+
+.collection-list button:hover{
     background-color: blue !important;
     color: white !important;
-    border-color: black;
-    
 }
