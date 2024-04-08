@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,7 @@
         integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
     <nav class="navbar navbar-light bg-white py-4 fixed-top">
         <div class="container">
@@ -29,7 +31,76 @@
                     <button type="button" class="btn position-relative">Registrarse</button>
                 </a>
     </nav>
-    </nav>
-    
+
+    <section id="collection" class="py-3">
+        <div class="container">
+            <div class="title text-center">
+                <h2 class="position-relative d-inline-block">Todos los juegos de PLAYSTATION</h2>
+            </div>
+    </section>
+
+    <div class="container-fluid">
+        <h2 class="fw-bold text-center py-5">Registrate</h2>
+    </div>
+
+    <section class="container">
+        <form class="row g-3">
+            <form class="row g-3 needs-validation" novalidate>
+                <div class="col-md-4">
+                    <label for="validationCustom01" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <label for="validationCustom02" class="form-label">Apellido</label>
+                    <input type="text" class="form-control" id="validationCustom02" value="Otto" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <label for="validationCustomUsername" class="form-label">Nombre de usuario</label>
+                    <div class="input-group has-validation">
+                        <span class="input-group-text" id="inputGroupPrepend">@</span>
+                        <input type="text" class="form-control" id="validationCustomUsername"
+                            aria-describedby="inputGroupPrepend" required>
+                        <div class="invalid-feedback">
+                            Please choose a username.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <label for="inputEmail4" class="form-label">Correo electrónico</label>
+                    <input type="email" class="form-control" id="inputEmail4">
+                </div>
+                <div class="col-md-6">
+                    <label for="inputPassword4" class="form-label">Contraseña</label>
+                    <input type="password" class="form-control" id="inputPassword4">
+                </div>
+                <div class="col-md-4">
+                    <label for="inputState" class="form-label">Sexo</label>
+                    <select id="inputState" class="form-select">
+                        <option selected>Seleccionar</option>
+                        <option>...</option>
+                    </select>
+                </div>
+                <div class="col-12">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="gridCheck">
+                        <label class="form-check-label" for="gridCheck">
+                            Check me out
+                        </label>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <a href="#">
+                        <button type="button" class="btn btn-primary">Registrarse</button>
+                    </a>
+                </div>
+            </form>
+    </section>
 </body>
+
 </html>
