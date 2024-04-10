@@ -26,3 +26,46 @@
     color: white !important;
 }
 
+/* Carrito */
+.seccion-carrito th{
+    text-align: left;
+    padding: 5px;
+    color: white;
+    background-color: blue;
+    font-weight: normal;
+}
+
+.seccion-carrito{
+    margin: 80px auto;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.carrito-info{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+td img{
+    width: 100px;
+    margin-right: 10px;
+}
+
+.precio-total{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.precio-total table{
+    border-top: 3px solid blue;
+    width: 100%;
+    max-width: 350px;
+}
+
+.precio-total button{
+    background-color: blue;
+    color: white;
+}
