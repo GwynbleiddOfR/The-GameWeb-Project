@@ -12,30 +12,32 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-md bg-light">
+   <!-- Encabezado (navbar) -->    
+    <nav class="navbar navbar-expand-md bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">
-                <img src="img/whitewolf.png" alt="White Wolf Logo">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="img/whitewolf.png" alt="White Wolf Logo" style="margin-right: 10px;"> 
+                <h4 class="text-white" style="margin: 0">White Wolf</h4>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                        <a class="nav-link active text-white" aria-current="page" href="index.html">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Mi perfil</a>
+                        <a class="nav-link text-white" href="#">Mi perfil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Admin</a>
+                        <a class="nav-link text-white" href="#">Admin</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="login.html">Iniciar sesión</a>
+                        <a class="nav-link text-white" href="login.html">Iniciar sesión</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="register.html">Registrarse</a>
+                        <a class="nav-link text-white" href="register.html">Registrarse</a>
                     </li>
                 </ul>
                 <div class="search-and-icons">
@@ -45,7 +47,7 @@
 
                     <div class="user-icons d-flex mb-2">
                         <a href="carrito.html">
-                            <div class="cart"><i class="bi bi-cart3"></i></div>
+                            <div class="cart"><i class="bi bi-cart-fill" style = "color:white;"></i></div>
                         </a>
                     </div>
                 </div>
@@ -53,7 +55,8 @@
         </div>
     </nav>
 
-    <section id="collection" class="p-5">
+    <!-- Main -->
+    <section id="collection" class="p-5 " style="background-color: #eee;">
         <div class="container">
             <div class="title text-center">
                 <h2 class="position-relative d-inline-block">Todos los juegos de PLAYSTATION</h2>
@@ -109,7 +112,7 @@
                         </div>
                         <div class="text-center">
                             <p class="text-capitalize my-1">My Friend Peppa Pig</p>
-                            <span class="fw-bold d-block">$999.999</span>
+                            <span class="fw-bold d-block">$500</span>
                             <button type="button" class="btn m-2 text-dark">Agregar al carrito</button>
                         </div>
                     </div>
