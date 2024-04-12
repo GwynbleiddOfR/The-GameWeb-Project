@@ -7,18 +7,20 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/stylesapi.css">
-    <title>Admin</title>
+    <title>Administar usuarios</title>
 </head>
 
 <body>
-   <!-- Encabezado (navbar) -->    
+    <!-- Encabezado (navbar) -->
     <nav class="navbar navbar-expand-md bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand d-flex align-items-center" href="index.html">
-                <img src="img/whitewolf.png" alt="White Wolf Logo" style="margin-right: 10px;"> 
+                <img src="img/whitewolf.png" alt="White Wolf Logo" style="margin-right: 10px;">
                 <h4 class="text-white" style="margin: 0">White Wolf</h4>
             </a>
-            <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -46,12 +48,67 @@
 
                     <div class="user-icons d-flex mb-2">
                         <a href="carrito.html">
-                            <div class="cart"><i class="bi bi-cart-fill" style = "color:white;"></i></div>
+                            <div class="cart"><i class="bi bi-cart-fill" style="color:white;"></i></div>
                         </a>
                     </div>
                 </div>
             </div>
         </div>
     </nav>
-    
+
+    <!-- Lista de usuarios -->
+    <div class="container mt-3">
+        <p class="mb-0 display-5">Opciones de administrador</p>
+        <a href="admin.html" class="btn btn-dark my-4 mx-1">Administrar usuarios</a>
+        <a href="adminGames.html" class="btn btn-dark my-1 mx-1">Administrar juegos</a>
+        <div class="table-responsive my-3">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th class="bg-dark text-white">ID</th>
+                        <th class="bg-dark text-white">Nombre</th>
+                        <th class="bg-dark text-white">Apellido</th>
+                        <th class="bg-dark text-white">Nombre de usuario</th>
+                        <th class="bg-dark text-white">Sexo</th>
+                        <th class="bg-dark text-white">Correo electrónico</th>
+                        <th class="bg-dark text-white">Número de telefóno</th>
+                        <th class="bg-dark text-white">Acción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Axel</td>
+                        <td>Silva</td>
+                        <td>axel123</td>
+                        <td>Femenino</td>
+                        <td>pagalosbarrosluco@gmail.com</td>
+                        <td>+56912345678</td>
+                        <td class="text-center">
+                            <button type="button" class="btn btn-success d-inline-block mx-1 my-1"><i class="bi bi-pencil"></i>Editar</button>
+                            <button type="button" class="btn btn-danger d-inline-block mx-1 my-1"><i class="bi bi-trash3"></i>Eliminar</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>2</td>
+                        <td>Simón</td>
+                        <td>Muñoz</td>
+                        <td>Biorka</td>
+                        <td>Otro</td>
+                        <td>maloconkayn@gmail.com</td>
+                        <td>+56987654321</td>
+                        <td class="text-center">
+                            <button type="button" class="btn btn-success d-inline-block mx-1"><i class="bi bi-pencil"></i>Editar</button>
+                            <button type="button" class="btn btn-danger d-inline-block mx-1"><i class="bi bi-trash3"></i>Eliminar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
     <script src="js/bootstrap.bundle.min.js""></script>
+</body>
+
+</html>
