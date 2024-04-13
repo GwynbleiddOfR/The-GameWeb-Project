@@ -72,3 +72,220 @@
     background: #fff;
     box-shadow: none;
   }
+
+  /* main */
+  img {
+    max-width: 100%;
+  }
+
+  .container-title {
+    padding: 30px;
+    background-color: #eee;
+    margin-bottom: 50px;
+    color: #222;
+  }
+
+  main {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 80px;
+  }
+
+  .container-img {
+    background-color: #f7f7f9;
+    flex: 1;
+  }
+
+  .container-info-producto {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container-price {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e4e4e4;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .container-price span {
+    font-size: 24px;
+    font-family: 300px;
+  }
+  
+  .container-detalles-juego {
+    padding: 30px;
+  }
+
+  .form-grup {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 15px;
+  }
+
+  .form-grup label {
+    width: 100px;
+    color: #222;
+    font-weight: 700px;
+  }
+
+  .form-grup select {
+    width: 300px;
+    border: none;
+    padding: 12px 15px;
+    background-color: #f7f7f7;
+    outline: none;
+    color: #666;
+  }
+
+  .btn-clean {
+    border: none;
+    background: none;
+    color: #666;
+    margin-left: 600px;
+    cursor: pointer;
+  }
+
+  .btn-clean:hover {
+    color: #1bbeb4;
+  }
+
+  .container-add-card {
+    display: flex;
+    gap: 20px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #e4e4e4;
+  }
+
+  .container-cantidad {
+    position: relative;
+
+  }
+
+  .input-cantidad {
+    background-color: #f7f7f7;
+    border: none;
+    padding: 10px;
+    width: 60px;
+    height: 100%;
+    color: #666;
+    font-weight: 500;
+  }
+
+  /*---------------------------------*/
+  .input-cantidad:focus{
+    outline: none;
+  }
+
+  .input-cantidad::-webkit-inner-spin-button,
+  .input-cantidad::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+    appearance: none;
+  }
+/*---------------------------------------------*/
+
+.btn-increment-decrement {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 7px;
+  right: 7px;
+}
+
+.btn-increment-decrement i {
+  font-size: 11px;
+  color: #666;
+  cursor: pointer;
+}
+
+/*color de los iconos  (i bi-chevron-down y bi-chevron-up)*/
+.bi-chevron-down:hover {
+  color: #1bbeb4;
+
+}
+
+.bi-chevron-up:hover {
+  color: #1bbeb4;
+  
+}
+/*----------------------------------*/
+
+.btn-add-ro-cart {
+  border: none;
+  background-color: #252525;
+  padding: 10px;
+  color: #f7f7f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  font-weight: 700px;
+  cursor: pointer;
+}
+
+.btn-add-ro-cart:hover {
+  color: #1bbeb4;
+}
+
+.hidden {
+  display: none;
+}
+
+.container-descripcion, .container-info-adicional, .container-reviews{
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #e4e4;
+  padding: 10px 0;
+}
+
+.title-descripcion, .title-info-adicional, .title-reviews{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.title-descripcion h4, .title-info-adicional h4, .title-reviews h4 {
+  font-weight: 300;
+  color: #666;
+  font-size: 14px;
+}
+
+.text-descripcion, .text-info-adicional, .text-reviews {
+  font-size: 13px;
+  color: #252525;
+  line-height: 22px;
+  margin-top: 25px;
+}
+
+.container-social {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  align-items: center;
+  border-bottom: 1px solid #e4e4e4;
+}
+
+.container-social span {
+  font-weight: 300;
+  color: #252525;
+}
+
+.container-buttons-social {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.container-buttons-social a:link,
+.container-buttons-social a:visited {
+  color: #666;
+  font-size: 15px;
+}
+
+.container-buttons-social a:hover {
+  color: #1bbeb4;
+}
