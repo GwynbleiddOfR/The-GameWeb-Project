@@ -176,7 +176,7 @@
   }
 
   /*---------------------------------*/
-  .input-cantidad:focus{
+/*   .input-cantidad:focus{
     outline: none;
   }
 
@@ -184,7 +184,7 @@
   .input-cantidad::-webkit-outer-spin-button{
     -webkit-appearance: none;
     appearance: none;
-  }
+  } */
 /*---------------------------------------------*/
 
 .btn-increment-decrement {
@@ -230,66 +230,30 @@
   color: #1bbeb4;
 }
 
-.hidden {
-  display: none;
-}
-
-.container-descripcion, .container-info-adicional, .container-reviews{
+.container-descripcion{
   display: flex;
   flex-direction: column;
   border-bottom: 1px solid #e4e4;
   padding: 10px 0;
 }
 
-.title-descripcion, .title-info-adicional, .title-reviews{
+.titulo-descripcion{
   display: flex;
   align-items: center;
   justify-content: space-between;
   cursor: pointer;
 }
 
-.title-descripcion h4, .title-info-adicional h4, .title-reviews h4 {
+.titulo-descripcion h4 {
   font-weight: 300;
   color: #666;
   font-size: 14px;
 }
 
-.text-descripcion, .text-info-adicional, .text-reviews {
+.text-description {
   font-size: 13px;
   color: #252525;
   line-height: 22px;
   margin-top: 25px;
 }
 
-.container-social {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px 0;
-  align-items: center;
-  border-bottom: 1px solid #e4e4e4;
-}
-
-.container-social span {
-  font-weight: 300;
-  color: #252525;
-}
-
-.container-buttons-social {
-  display: flex;
-  gap: 15px;
-  align-items: center;
-}
-
-.container-buttons-social a:link,
-.container-buttons-social a:visited {
-  color: #666;
-  font-size: 15px;
-}
-
-.container-buttons-social a:hover {
-  color: #1bbeb4;
-}
-
-.categoria-juego {
- max-width: 200px;
-}
