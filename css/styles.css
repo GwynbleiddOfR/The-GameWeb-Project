@@ -92,8 +92,8 @@
   }
 
   .container-img {
-    background-color: #f7f7f9;
-    flex: 1;
+    background-color: white;
+    flex: 0.5;
   }
 
   .container-info-producto {
@@ -145,7 +145,7 @@
     border: none;
     background: none;
     color: #666;
-    margin-left: 600px;
+    margin-left: 120px;
     cursor: pointer;
   }
 
@@ -288,4 +288,8 @@
 
 .container-buttons-social a:hover {
   color: #1bbeb4;
+}
+
+.categoria-juego {
+ max-width: 200px;
 }

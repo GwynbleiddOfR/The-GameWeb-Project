@@ -101,7 +101,7 @@
     <div class="container-title">Juego</div>
 
     <main>
-      <div class="container-img">
+      <div class="container-img d-flex flex-column">
         <img src="img/medievil.gif" alt="medievil2" />
       </div>
       <div class="container-info-producto">
@@ -111,24 +111,14 @@
         </div>
         <div class="container-detalles-juego">
           <div class="form-grup">
-            <label for="colour">Color</label>
-            <select name="colour" id="colour">
-              <option disabled selected value="">Escoge una Opcion</option>
-              <option value="Rojo">Rojo</option>
-              <option value="Blanco">Blanco</option>
-              <option value="Baige">Baige</option>
-            </select>
+            <label for="vendedor">Vendedor</label>
+            <p>Nombre del vendedor</p>
           </div>
-          <div class="form-grup">
-            <label for="Talla">Talla</label>
-            <select name="Talla" id="Talla">
-              <option disabled selected value="">Escoge una Opcion</option>
-              <option value="43">43</option>
-              <option value="42">42</option>
-              <option value="41">41</option>
-            </select>
-          </div>
-          <button class="btn-clean">Limpiar</button>
+          <div class="form-grup categoria-juego">
+            <label for="categoria">Categoria</label>
+            <button type="button" class="btn btn-secondary">aventura</button>
+            <button type="button" class="btn btn-secondary">terror</button>
+            <button type="button" class="btn btn-secondary">terror</button>
         </div>
         <div class="container-add-card">
           <div class="container-cantidad">
@@ -140,8 +130,8 @@
               class="input-cantidad"
             />
             <div class="btn-increment-decrement">
-              <i class="bi bi-chevron-up"></i>
-              <i class="bi bi-chevron-down"></i>
+              <i class="bi bi-chevron-up" id="increment"></i>
+              <i class="bi bi-chevron-down" id="decrement"></i>
             </div>
           </div>
           <button class="btn-add-ro-cart">
@@ -154,7 +144,7 @@
             <h4>Descripcion</h4>
             <i class="bi bi-chevron-down"></i>
           </div>
-          <div class="text-description">
+          <div class="text-description hidden">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
             debitis deleniti libero! Natus, dolor sed! Veritatis sunt, delectus
             saepe iste reprehenderit ab perferendis, iure neque laborum deserunt
@@ -169,7 +159,7 @@
                 <h4>Informacio adicional</h4>
                 <i class="bi bi-chevron-down"></i>
             </div>
-            <div class="text-adicional-information">
+            <div class="text-adicional-information hidden">
                 <p>-------------</p>
             </div>
         </div>
@@ -178,7 +168,7 @@
                 <h4>Informacio adicional</h4>
                 <i class="bi bi-chevron-down"></i>
             </div>
-            <div class="text-reviews">
+            <div class="text-reviews hidden">
                 <p>-------------</p>
             </div>
         </div>
@@ -194,11 +184,7 @@
         </div>
       </div>
     </main>
-
-    <footer>
-      <p>Footer</p>
-    </footer>
-
+    
     <script>
       src = "js/index.js";
     </script>
