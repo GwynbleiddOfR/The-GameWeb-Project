@@ -11,14 +11,16 @@
 </head>
 
 <body>
-   <!-- Encabezado (navbar) -->    
+    <!-- Encabezado (navbar) -->
     <nav class="navbar navbar-expand-md bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand d-flex align-items-center" href="index.html">
-                <img src="img/whitewolf.png" alt="White Wolf Logo" style="margin-right: 10px;"> 
+                <img src="img/whitewolf.png" alt="White Wolf Logo" style="margin-right: 10px;">
                 <h4 class="text-white" style="margin: 0">White Wolf</h4>
             </a>
-            <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -46,14 +48,39 @@
 
                     <div class="user-icons d-flex mb-2">
                         <a href="carrito.html">
-                            <div class="cart"><i class="bi bi-cart-fill" style = "color:white;"></i></div>
+                            <div class="cart"><i class="bi bi-cart-fill" style="color:white;"></i></div>
                         </a>
                     </div>
                 </div>
             </div>
         </div>
     </nav>
-        
+
+    <!-- Perfil -->
+    <div class="container mt-4 mb-4 p-3 d-flex justify-content-center">
+        <div class="card p-4">
+            <p class="fw-bold">Información de contacto</p>
+            <div class="d-flex flex-column justify-content-center align-items-center"> 
+                <h3 class="name mt-3">Axel Silva</h3> 
+                <span class="idd fw-bold">@axel123</span>
+                <div class="d-flex flex-row justify-content-center align-items-center gap-2 mt-2"> 
+                    <span class="email">pagalosbarrosluco@gmail.com</span>
+                    <span><i class="bi bi-copy"></i></span> 
+                </div>
+                <div class="d-flex flex-row justify-content-center align-items-center gap-2 mt-2"> 
+                    <span class="email">+56912345678</span>
+                    <span><i class="bi bi-copy"></i></span> 
+                </div>
+                <div class="d-flex justify-content-between mt-2"> 
+                    <button type="button" class="btn btn-dark">Editar perfil</button> 
+                    <button type="button" class="btn btn-dark">Vender</button> 
+                    <button type="button" class="btn btn-dark">Ver ventas</button> 
+                </div>
+                <div class="px-2 rounded mt-4 date"> <span class="join">Se unió el 1 de abril del 2030</span> </div>
+            </div>
+        </div>
+    </div>
+    
     <script src="js/bootstrap.bundle.min.js""></script>
 </body>
 
