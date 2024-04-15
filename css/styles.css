@@ -263,3 +263,12 @@
   margin-top: 25px;
 }
 
+/*section*/
+.formulario {
+  margin: 50px;
+  padding: 20px;
+}
+
+.form-label {
+  font-family: 'Courier New', Courier, monospace;
+}
