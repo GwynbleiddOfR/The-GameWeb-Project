@@ -97,3 +97,16 @@
     height: 100vh !important;
   }
 }
+
+/* adminGames */
+@media (min-width: 992px) {
+  #adminBuscarJuegos {
+      max-width: 300px;
+  }
+}
+
+@media (min-width: 992px) {
+  #adminBuscarUser {
+      max-width: 300px;
+  }
+}
