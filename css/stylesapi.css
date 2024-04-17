@@ -74,6 +74,11 @@
 }
 
 /* Main */
+#palabrita{
+  font-family: "Jersey 10 Charted", sans-serif;
+}
+
+
 .active-filter-btn:hover {
   background-color: black !important;
   color: white !important;
