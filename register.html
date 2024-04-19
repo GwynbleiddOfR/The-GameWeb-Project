@@ -65,18 +65,18 @@
                         <div class="card-body p-4 p-md-5">
                             <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Registrate</h3>
 
-                            <form action="login.html" method="get">
+                            <form action="login.html" class="was-validated" method="post">
                                 <div class="row">
                                     <div class="col-md-6 mb-4">
                                         <div data-mdb-input-init class="form-outline">
-                                            <input type="text" id="nombre" class="form-control form-control-lg" required/>
+                                            <input type="text" id="nombre" name="nombre" placeholder="Nombre..." class="form-control form-control-lg" required/>
                                             <label class="form-label" for="nombre">Nombre</label>
                                         </div>
                                     </div>
 
                                     <div class="col-md-6 mb-4">
                                         <div data-mdb-input-init class="form-outline">
-                                            <input type="text" id="apellido" class="form-control form-control-lg" required/>
+                                            <input type="text" id="apellido" name="apellido" placeholder="Apellido..." class="form-control form-control-lg" required/>
                                             <label class="form-label" for="apellido">Apellido</label>
                                         </div>
                                     </div>
@@ -85,7 +85,7 @@
                                 <div class="row">
                                     <div class="col-md-6 mb-4 d-flex align-items-center">
                                         <div data-mdb-input-init class="form-outline datepicker w-100">
-                                            <input type="text" class="form-control form-control-lg" id="userName" required/>
+                                            <input type="text" class="form-control form-control-lg" id="userName" name="userName" placeholder="Nombre de usuario..." required/>
                                             <label for="userName" class="form-label">Nombre de usuario</label>
                                         </div>
                                 </div>
@@ -95,19 +95,19 @@
                                         <h6 class="mb-2 pb-1">Sexo:</h6>
                                         <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                                id="femaleGender" value="option1" checked />
+                                                id="femaleGender" value="opcionFemenino" checked />
                                             <label class="form-check-label" for="femaleGender">Femenino</label>
                                         </div>
 
                                         <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                                id="maleGender" value="option2" />
+                                                id="maleGender" value="optionMasculino" />
                                             <label class="form-check-label" for="maleGender">Masculino</label>
                                         </div>
 
                                         <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                                id="otherGender" value="option3" />
+                                                id="otherGender" value="optionOtro" />
                                             <label class="form-check-label" for="otherGender">Otro</label>
                                         </div>
                                     </div>
@@ -115,21 +115,21 @@
                                 <div class="row">
                                     <div class="col-md-6 mb-4 pb-2">
                                         <div data-mdb-input-init class="form-outline">
-                                            <input type="email" id="mail" class="form-control form-control-lg" required />
+                                            <input type="email" id="mail" name="mail" placeholder="Correo electrónico..." class="form-control form-control-lg" required />
                                             <label class="form-label" for="mail">Correo electrónico</label>
                                         </div>
                                 </div>
 
                                     <div class="col-md-6 mb-4 pb-2">
                                         <div data-mdb-input-init class="form-outline">
-                                            <input type="password" id="pass" class="form-control form-control-lg" required/>
+                                            <input type="password" id="pass" name="pass" placeholder="Contraseña..." class="form-control form-control-lg" required/>
                                             <label class="form-label" for="pass">Contraseña</label>
                                         </div>
                                     </div>
 
                                     <div class="col-md-6 mb-4 pb-2">
                                         <div data-mdb-input-init class="form-outline">
-                                            <input type="tel" id="telefono" class="form-control form-control-lg" required/>
+                                            <input type="tel" id="telefono" name="telefono" placeholder="Teléfono..." class="form-control form-control-lg" required/>
                                             <label class="form-label" for="telefono">Número de teléfono</label>
                                         </div>
                                     </div>
