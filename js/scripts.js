@@ -1,17 +1,39 @@
 function validarPass() {
     let pass = document.getElementById("pass").value;
     let rePass = document.getElementById("rePass").value;
-    let mensaje = document.getElementById("mensaje");
+    let mensajePass = document.getElementById("mensajePass");
 
     if (pass.length !=0) {
         if (pass == rePass) {
-            document.getElementById("mensaje").className="text-success"
-            mensaje.textContent = "Las contraseñas coinciden";
+            document.getElementById("mensajePass").className="text-success"
+            mensajePass.textContent = "Las contraseñas coinciden";
+            return true;
         }
         else
         {
-            document.getElementById("mensaje").className="text-danger"
-            mensaje.textContent = "Las contraseñas no coinciden";
+            document.getElementById("mensajePass").className="text-danger"
+            mensajePass.textContent = "Las contraseñas no coinciden";
+            return false;
         }
     }
+}
+
+function validarGender() {
+    const opciones = document.getElementsByName("inlineRadioOptions");
+    let mensajeGender = document.getElementById("mensajeGender");
+    let seleccionado = false;
+
+    for (const opcion of opciones) {
+        if (opcion.checked) {
+            seleccionado = true;
+            break;
+        }
+    }
+
+    if (!seleccionado) {
+        mensajeGender.textContent = "Seleccione una opción";
+        return false;
+    }
+
+    return true;
 }
