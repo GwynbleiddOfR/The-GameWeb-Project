@@ -45,9 +45,9 @@ function validarPass() {
 // Primera letra de nombre, apellido, ciudad y comuna siempre en mayuscula
 function primeraLetraMayuscula(id) {
     let input = document.getElementById(id);
-    input.addEventListener('input', function(e) {
-      let valor = e.target.value;
-      e.target.value = valor.charAt(0).toUpperCase() + valor.slice(1);
+    input.addEventListener('input', function (e) {
+        let valor = e.target.value;
+        e.target.value = valor.charAt(0).toUpperCase() + valor.slice(1);
     });
 }
 
@@ -57,34 +57,49 @@ primeraLetraMayuscula('apellido');
 
 // Funcion que permite usar el maxlength en type number
 function validarLongitudInput() {
-    document.querySelectorAll('input[type="number"]').forEach(input =>{
+    document.querySelectorAll('input[type="number"]').forEach(input => {
         input.oninput = () => {
-            if(input.value.length > input.maxLength) input.value = input.value.slice(0, input.maxLength);
+            if (input.value.length > input.maxLength) input.value = input.value.slice(0, input.maxLength);
         };
     });
 }
 
 // ********** FORMULARIO DE VENTA **********
 function cancelarVenta() {
-    $('#modalCancelarVenta').modal('hide'); // Esto cierra el modal
+    $('#modalCancelarVenta').modal('hide');
 }
 
 function confirmarVenta() {
-    $('#modalConfirmarVenta').modal('hide'); // Esto cierra el modal
+    $('#modalConfirmarVenta').modal('hide');
 }
 
 function validarYCerrarModalConfirmarVenta(event) {
-    // Obtiene el formulario por su ID
     let formularioVenta = document.getElementById('formularioVenta');
-    
-    // Verifica si el formulario es válido
+
     if (!formularioVenta.checkValidity()) {
-      // Si el formulario no es válido, muestra un mensaje al usuario
-      alert('Por favor, completa todos los campos requeridos antes de publicar la venta.');
-      // Y luego previene la acción de envío
-      event.preventDefault();
+        alert('Por favor, completa todos los campos requeridos antes de publicar la venta.');
+        event.preventDefault();
     } else {
-      // Si el formulario es válido, permite que el modal se cierre
-      $('#modalConfirmarVenta').modal('hide');
+        $('#modalConfirmarVenta').modal('hide');
+    }
+}
+
+// ********** FORMULARIO DE ELIMINACION DE JUEGO **********
+function cancelarElimiacionJuego() {
+    $('#modalCancelarEliminacionJuego').modal('hide');
+}
+
+function confirmarEliminacionJuego() {
+    $('#modalConfirmarEliminacionJuego').modal('hide');
+}
+
+function validarYCerrarModalConfirmarEliminacionJuego(event) {
+    let formDeleteGame = document.getElementById('formDeleteGame');
+
+    if (!formDeleteGame.checkValidity()) {
+        alert('Por favor, completa todos los campos requeridos antes de eliminar el juego.');
+        event.preventDefault();
+    } else {
+        $('#modalConfirmarEliminacionJuego').modal('hide');
     }
 }
