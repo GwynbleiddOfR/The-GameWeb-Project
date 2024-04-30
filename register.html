@@ -135,7 +135,8 @@
                                                 <label class="form-label" for="mail">Correo electrónico</label>
                                                 <input type="email" id="mail" name="mail"
                                                     placeholder="Correo electrónico..."
-                                                    class="form-control form-control-lg" pattern="[^ ]+@[^ ]+\.(com|cl|org|net)" required />
+                                                    class="form-control form-control-lg"
+                                                    pattern="[^ ]+@[^ ]+\.(com|cl|org|net)" required />
                                                 <div class="invalid-feedback">Ejemplo: example@gmail.com</div>
                                             </div>
                                         </div>
@@ -147,6 +148,56 @@
                                                     placeholder="Teléfono..." class="form-control form-control-lg"
                                                     pattern="[0-9]{8}" required minlength="8" maxlength="8" />
                                                 <div class="invalid-feedback">Ejemplo: 12345678</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6 mb-4 pb-2">
+                                            <div data-mdb-input-init class="form-outline">
+                                                <label class="form-label" for="region">Región</label>
+                                                <select id="region" name="region" class="form-control form-control-lg"
+                                                    required />
+                                                <option value="">Selecciona una región</option>
+                                                <option value="rm">RM-Metropolitana</option>
+                                                <option value="quinta">V-Valparaíso</option>
+                                                <option value="octava">VIII-Bio Bío</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6 mb-4 pb-2">
+                                            <div data-mdb-input-init class="form-outline">
+                                                <label class="form-label" for="ciudad">Ciudad</label>
+                                                <select id="ciudad" name="ciudad" class="form-control form-control-lg"
+                                                    required />
+                                                <option value="">Selecciona una ciudad...</option>
+                                                <option value="santiago">Santiago</option>
+                                                <option value="valparaiso">Valparaíso</option>
+                                                <option value="concepcion">Concepción</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6 mb-4 pb-2">
+                                            <div data-mdb-input-init class="form-outline">
+                                                <label class="form-label" for="comuna">Comuna</label>
+                                                <select id="comuna" name="comuna" class="form-control form-control-lg"
+                                                    required />
+                                                <option value="">Selecciona una comuna...</option>
+                                                <option value="coronel">Coronel</option>
+                                                <option value="hualpen">Hualpene</option>
+                                                <option value="chiguayante">Chiguayante</option>
+                                                <option value="lota">Lota ql feo</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6 mb-4 d-flex align-items-center">
+                                            <div data-mdb-input-init class="form-outline datepicker w-100">
+                                                <label for="direccion" class="form-label">Dirección</label>
+                                                <input type="text" class="form-control form-control-lg" id="direccion"
+                                                    name="direccion" placeholder="Dirección..." pattern=".*\d.*"
+                                                    required minlength="3" maxlength="20" />
+                                                <div class="invalid-feedback">Ejemplo: Paicaví 516</div>
                                             </div>
                                         </div>
 

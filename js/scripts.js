@@ -54,5 +54,3 @@ function primeraLetraMayuscula(id) {
 // Aplicar la funcion a ambos campos
 primeraLetraMayuscula('nombre');
 primeraLetraMayuscula('apellido');
-primeraLetraMayuscula('ciudad');
-primeraLetraMayuscula('comuna');
