@@ -28,17 +28,31 @@ function validarPass() {
     let rePass = document.getElementById("rePass").value;
     let mensajePass = document.getElementById("mensajePass");
 
-    if (pass.length !=0) {
+    if (pass.length != 0) {
         if (pass == rePass) {
-            document.getElementById("mensajePass").className="text-success"
+            document.getElementById("mensajePass").className = "text-success"
             mensajePass.textContent = "";
             return true;
         }
-        else
-        {
-            document.getElementById("mensajePass").className="text-danger"
+        else {
+            document.getElementById("mensajePass").className = "text-danger"
             mensajePass.textContent = "Las contraseñas no coinciden";
             return false;
         }
     }
 }
+
+// Primera letra de nombre, apellido, ciudad y comuna siempre en mayuscula
+function primeraLetraMayuscula(id) {
+    let input = document.getElementById(id);
+    input.addEventListener('input', function(e) {
+      let valor = e.target.value;
+      e.target.value = valor.charAt(0).toUpperCase() + valor.slice(1);
+    });
+}
+
+// Aplicar la funcion a ambos campos
+primeraLetraMayuscula('nombre');
+primeraLetraMayuscula('apellido');
+primeraLetraMayuscula('ciudad');
+primeraLetraMayuscula('comuna');
