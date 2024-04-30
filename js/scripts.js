@@ -54,3 +54,37 @@ function primeraLetraMayuscula(id) {
 // Aplicar la funcion a ambos campos
 primeraLetraMayuscula('nombre');
 primeraLetraMayuscula('apellido');
+
+// Funcion que permite usar el maxlength en type number
+function validarLongitudInput() {
+    document.querySelectorAll('input[type="number"]').forEach(input =>{
+        input.oninput = () => {
+            if(input.value.length > input.maxLength) input.value = input.value.slice(0, input.maxLength);
+        };
+    });
+}
+
+// ********** FORMULARIO DE VENTA **********
+function cancelarVenta() {
+    $('#modalCancelarVenta').modal('hide'); // Esto cierra el modal
+}
+
+function confirmarVenta() {
+    $('#modalConfirmarVenta').modal('hide'); // Esto cierra el modal
+}
+
+function validarYCerrarModalConfirmarVenta(event) {
+    // Obtiene el formulario por su ID
+    let formularioVenta = document.getElementById('formularioVenta');
+    
+    // Verifica si el formulario es válido
+    if (!formularioVenta.checkValidity()) {
+      // Si el formulario no es válido, muestra un mensaje al usuario
+      alert('Por favor, completa todos los campos requeridos antes de publicar la venta.');
+      // Y luego previene la acción de envío
+      event.preventDefault();
+    } else {
+      // Si el formulario es válido, permite que el modal se cierre
+      $('#modalConfirmarVenta').modal('hide');
+    }
+}

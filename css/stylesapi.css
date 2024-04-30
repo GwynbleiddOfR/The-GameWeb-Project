@@ -132,3 +132,12 @@
   background-color: #fff; /* Color de fondo blanco */
   border-color: #ced4da; /* Color de borde por defecto de Bootstrap */
 }
+
+/* Para ocultar las flechas en navegadores basados en WebKit como Chrome, Safari, etc. */
+#precio::-webkit-inner-spin-button,
+#precio::-webkit-outer-spin-button,
+#telefono::-webkit-inner-spin-button,
+#telefono::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}

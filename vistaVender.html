@@ -1,164 +1,224 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!--Bootstrap-->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="js/index.js">
-    <link rel="stylesheet" href="css/styles.css" />
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <title>descripcion</title>
-  </head>
-  <body>
-    <header>
-      <!-- Encabezado (navbar) -->
-      <nav class="navbar navbar-expand-md bg-dark">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/stylesapi.css">
+    <title>Realizar venta</title>
+</head>
+
+<body style="background-color: #eee;">
+    <!-- Encabezado (navbar) -->
+    <nav class="navbar navbar-expand-md bg-dark">
         <div class="container-fluid">
-          <a class="navbar-brand d-flex align-items-center" href="index.html">
-            <img
-              src="img/whitewolf.png"
-              alt="White Wolf Logo"
-              style="margin-right: 10px"
-            />
-            <h4 class="text-white" style="margin: 0">White Wolf</h4>
-          </a>
-          <button
-            class="navbar-toggler bg-white"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a
-                  class="nav-link active text-white"
-                  aria-current="page"
-                  href="index.html"
-                  >Inicio</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white" href="userProfile.html"
-                  >Mi perfil</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white" href="admin.html">Admin</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white" href="login.html"
-                  >Iniciar sesión</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white" href="register.html"
-                  >Registrarse</a
-                >
-              </li>
-            </ul>
-            <div class="search-and-icons">
-              <form class="d-flex mb-2 me-4" role="search">
-                <input
-                  class="form-control me-2"
-                  type="search"
-                  aria-label="Search"
-                />
-              </form>
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="img/whitewolf.png" alt="White Wolf Logo" style="margin-right: 10px;">
+                <h4 class="text-white" style="margin: 0">White Wolf</h4>
+            </a>
+            <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active text-white" aria-current="page" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="userProfile.html">Mi perfil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="admin.html">Admin</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="login.html">Iniciar sesión</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="register.html">Registrarse</a>
+                    </li>
+                </ul>
+                <div class="search-and-icons">
+                    <form class="d-flex mb-2 me-4" role="search">
+                        <input class="form-control me-2" type="search" aria-label="Search">
+                    </form>
 
-              <div class="user-icons d-flex mb-2">
-                <a href="carrito.html">
-                  <div class="cart">
-                    <i class="bi bi-cart-fill" style="color: white"></i>
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </nav>
-    </header>
-
-    <!-- Formulario de ventas -->
-
-       <h2 class="my-3">Formulario de venta</h2></div>        
-        <div class="container">
-          <form action="/action_page.php">
-            <div class="row">
-              <div class="col-25">
-                <label for="fname">Nombre del juego</label>
-              </div>
-              <div class="col-75">
-                <input type="text" id="fname" name="firstname" placeholder="Nombre del juego..">
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-25">
-                <label for="lname">Genero</label>
-              </div>
-              <div class="col-75">
-                <input type="text" id="lname" name="lastname" placeholder="Genero..">
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-25">
-                <label for="lname">Consola</label>
-              </div>
-              <div class="col-75">
-                <input type="text" id="lname" name="lastname" placeholder="Consola..">
-              </div>
-            </div>
-            <div class="row">
-                <div class="col-25">
-                  <label for="lname">Precio</label>
+                    <div class="user-icons d-flex mb-2">
+                        <a href="carrito.html">
+                            <div class="cart"><i class="bi bi-cart-fill" style="color:white;"></i></div>
+                        </a>
+                    </div>
                 </div>
-                <div class="col-75">
-                  <input type="text" id="lname" name="lastname" placeholder="$">
-                </div>
-              </div>
-            <div class="row">
-              <div class="col-25">
-                <label for="country">Número de copias</label>
-              </div>
-              <div class="col-75">
-                <input type="number">
-              </div>
             </div>
-            <div class="row">
-              <div class="col-25">
-                <label for="subject">Descripcion</label>
-              </div>
-              <div class="col-75">
-                <textarea id="subject" name="subject" placeholder="Estado del producto..." style="height:200px"></textarea>
-                <input class="subir-imagen" type="file" >
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col-12">
-                <a href="userProfile.html"><input type="button" class="mx-3" value="Cancelar"></a>
-                <a href="vistaVentas.html"><input type="button"  onclick="alert('Producto en venta!')" value="Realizar venta"></a>
-              </div>
-            </div>
-          </form>
         </div>
+    </nav>
 
-    
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+    <!-- Editar perfil -->
+    <section class="vh-100">
+        <div class="container py-5 h-100 animate__animated animate__backInLeft">
+            <div class="row justify-content-center align-items-center h-100">
+                <div class="col-12 col-lg-9 col-xl-7">
+                    <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+                        <div class="card-body p-4 p-md-5">
+                            <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Formulario de venta</h3>
+
+                            <form action="vistaVentas.html" class="was-validated" id="formularioVenta" method="post">
+                                <div class="row">
+                                    <div class="col-md-12 mb-4">
+                                        <div data-mdb-input-init class="form-outline">
+                                            <label class="form-label" for="nameGame">Nombre del juego</label>
+                                            <input type="text" id="nameGame" name="nameGame"
+                                                placeholder="Nombre del juego..." class="form-control form-control-lg"
+                                                required minlength="2" />
+                                            <div class="invalid-feedback">Al menos 2 caracteres</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12 mb-4">
+                                        <div data-mdb-input-init class="form-outline">
+                                            <label class="form-label" for="gameType">Género</label>
+                                            <input type="text" id="gameType" name="gameType" placeholder="Género..."
+                                                class="form-control form-control-lg" pattern="[A-Za-zñÑáéíóúÁÉÍÓÚ ]+"
+                                                required minlength="2" />
+                                            <div class="invalid-feedback">Al menos 2 caracteres, no se permiten números
+                                                ni caracteres especiales</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12 mb-4 d-flex align-items-center">
+                                        <div data-mdb-input-init class="form-outline">
+                                            <label class="form-label" for="consola">Consola</label>
+                                            <select id="consola" name="consola" class="form-control form-control-lg"
+                                                required />
+                                            <option value="">Selecciona una consola...</option>
+                                            <option value="ps1">Playstation 1</option>
+                                            <option value="ps2">Playstation 2</option>
+                                            <option value="ps3">Playstation 3</option>
+                                            <option value="ps4">Playstation 4</option>
+                                            <option value="ps5">Playstation 5</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12 mb-4 d-flex align-items-center">
+                                        <div data-mdb-input-init class="form-outline">
+                                            <label class="form-label" for="precio">Precio</label>
+                                            <input type="number" id="precio" name="precio" placeholder="$"
+                                                class="form-control form-control-lg" oninput="validarLongitudInput()"
+                                                required min="1" max="999999" maxlength="6" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12 mb-4 d-flex align-items-center">
+                                        <div data-mdb-input-init class="form-outline">
+                                            <label class="form-label" for="copias">Número de copias</label>
+                                            <input type="number" id="copias" name="copias" placeholder="N° de copias..."
+                                                class="form-control form-control-lg" oninput="validarLongitudInput()"
+                                                required min="1" maxlength="3" />
+                                            <div class="invalid-feedback">Ejemplo: 12345678</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12 mb-4">
+                                        <div data-mdb-input-init class="form-outline">
+                                            <label class="form-label" for="descripcion">Descripción</label>
+                                            <textarea class="form-control" id="descripcion" name="descripcion" rows="10"
+                                                required></textarea>
+                                            <div class="invalid-feedback">Agregue una descripción de su juego</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12 mb-4">
+                                        <label class="form-label" for="archivo">Subir imagen</label> <br>
+                                        <input class="form-control" type="file" required>
+                                        <div class="invalid-feedback">Agregue una imagen de su juego</div>
+                                    </div>
+                                </div>
+
+                                <div class="d-grid">
+                                    <button type="submit" class="btn btn-dark btn-lg mb-3" data-bs-toggle="modal"
+                                    data-bs-target="#modalConfirmarVenta">Realizar venta</button>
+                                    <button type="button" class="btn btn-danger btn-lg" data-bs-toggle="modal"
+                                    data-bs-target="#modalCancelarVenta">Cancelar</button>
+                                </div>
+
+                            
+                            </form>
+
+                            <!-- Modal cancelar venta -->
+                            <div class="modal fade" id="modalCancelarVenta" tabindex="-1"
+                                aria-labelledby="modalCancelarVentaLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="modalCancelarVentaLabel">Confirmar cancelación
+                                            </h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            ¿Seguro que quieres cancelar la venta?
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-dark" data-bs-dismiss="modal">No,
+                                                conservar</button>
+                                            <a href="userProfile.html">
+                                                <button type="button" class="btn btn-danger"">Sí,
+                                                    cancelar</button>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Modal confirmar venta -->
+                            <div class="modal fade" id="modalConfirmarVenta" tabindex="-1"
+                                aria-labelledby="modalConfirmarVenta" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="modalConfirmarVentaLabel">Confirmar venta
+                                            </h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            ¿Seguro que quieres publicar tu venta?
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-dark" data-bs-dismiss="modal">No,
+                                                me falta algo</button>
+
+                                            <button type="submit" form="formularioVenta" class="btn btn-success" 
+                                                onclick="validarYCerrarModalConfirmarVenta(event)">Si, quiero publicar la venta
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="js/scripts.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
 </html>
