@@ -68,7 +68,7 @@
                             <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Registrate</h3>
 
                             <form action="login.html" class="was-validated" method="post"
-                                 onsubmit="return validarGender() && validarPass()">
+                                onsubmit="return validarGender() && validarPass()">
                                 <div class="row">
                                     <div class="col-md-6 mb-4">
                                         <div data-mdb-input-init class="form-outline">
@@ -98,9 +98,10 @@
                                         <div data-mdb-input-init class="form-outline datepicker w-100">
                                             <label for="userName" class="form-label">Nombre de usuario</label>
                                             <input type="text" class="form-control form-control-lg" id="userName"
-                                                name="userName" placeholder="Nombre de usuario..."  pattern="[^ ]+" required
-                                                minlength="5" maxlength="13" />
-                                            <div class="invalid-feedback">Al menos 5 caracteres y máximo 13, no se permiten espacios</div>
+                                                name="userName" placeholder="Nombre de usuario..." pattern="[^ ]+"
+                                                required minlength="5" maxlength="13" />
+                                            <div class="invalid-feedback">Al menos 5 caracteres y máximo 13, no se
+                                                permiten espacios</div>
                                         </div>
                                     </div>
 
@@ -110,19 +111,19 @@
 
                                         <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                                id="femaleGender" value="opcionFemenino"/>
+                                                id="femaleGender" value="opcionFemenino" />
                                             <label class="form-check-label" for="femaleGender">Femenino</label>
                                         </div>
 
                                         <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                                id="maleGender" value="optionMasculino"/>
+                                                id="maleGender" value="optionMasculino" />
                                             <label class="form-check-label" for="maleGender">Masculino</label>
                                         </div>
 
                                         <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                                id="otherGender" value="optionOtro"/>
+                                                id="otherGender" value="optionOtro" />
                                             <label class="form-check-label" for="otherGender">Otro</label>
                                         </div>
                                         <div class="text-danger" id="mensajeGender"></div>
@@ -134,7 +135,8 @@
                                                 <label class="form-label" for="mail">Correo electrónico</label>
                                                 <input type="email" id="mail" name="mail"
                                                     placeholder="Correo electrónico..."
-                                                    class="form-control form-control-lg" required />
+                                                    class="form-control form-control-lg" pattern="[^ ]+@[^ ]+\.(com|cl|org|net)" required />
+                                                <div class="invalid-feedback">Ejemplo: example@gmail.com</div>
                                             </div>
                                         </div>
 
@@ -143,7 +145,8 @@
                                                 <label class="form-label" for="telefono">Número de teléfono</label>
                                                 <input type="tel" id="telefono" name="telefono"
                                                     placeholder="Teléfono..." class="form-control form-control-lg"
-                                                    required />
+                                                    pattern="[0-9]{8}" required minlength="8" maxlength="8" />
+                                                <div class="invalid-feedback">Ejemplo: 12345678</div>
                                             </div>
                                         </div>
 

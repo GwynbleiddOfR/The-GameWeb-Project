@@ -1,3 +1,5 @@
+// ****************** Registro  ******************
+
 // Validar genero
 function validarGender() {
     const opciones = document.getElementsByName("inlineRadioOptions");
