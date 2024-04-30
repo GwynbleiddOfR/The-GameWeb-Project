@@ -10,7 +10,7 @@
     <title>Mi perfil</title>
 </head>
 
-<body>
+<body style="background-color: #eee;">
     <!-- Encabezado (navbar) -->
     <nav class="navbar navbar-expand-md bg-dark">
         <div class="container-fluid">
@@ -57,12 +57,6 @@
     </nav>
 
     <!-- Editar perfil -->
-    <style>
-        body {
-            background-color: #eee;
-        }
-    </style>
-
     <div class="container rounded bg-white mt-5 mb-5">
         <div class="row">
             <div class="col-md-3 border-right">
@@ -86,11 +80,16 @@
                                 <label class="form-label" for="nombre">Nombre</label>
                                 <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Nombre"
                                     pattern="[A-Za-zñÑáéíóúÁÉÍÓÚ ]+" required minlength="2">
+                                <div class="invalid-feedback">Al menos 2 caracteres, no se permiten números
+                                    ni caracteres especiales</div>
                             </div>
+
                             <div class="col-md-6">
                                 <label class="form-label" for="apellido">Apellido</label>
                                 <input type="text" class="form-control" id="apellido" name="apellido"
                                     placeholder="Apellido" pattern="[A-Za-zñÑáéíóúÁÉÍÓÚ ]+" required minlength="2">
+                                <div class="invalid-feedback">Al menos 2 caracteres, no se permiten números
+                                    ni caracteres especiales</div>
                             </div>
                         </div>
 
@@ -100,16 +99,53 @@
                                 <input type="tel" id="telefono" name="telefono" class="form-control"
                                     placeholder="Número de telefóno" pattern="[0-9]{8}" required minlength="8"
                                     maxlength="8">
+                                <div class="invalid-feedback">Ejemplo: 12345678</div>
                             </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12 mt-3">
+                                <label class="form-label" for="region">Región</label>
+                                <select id="region" name="region" class="form-control" required>
+                                    <option value="">Selecciona una región...</option>
+                                    <option value="rm">RM-Metropolitana</option>
+                                    <option value="quinta">V-Valparaíso</option>
+                                    <option value="octava">VIII-Bio Bío</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="row">
                             <div class="col-md-12 mt-3">
                                 <label class="form-label" for="ciudad">Ciudad</label>
-                                <input type="text" id="ciudad" name="ciudad" class="form-control"
-                                    pattern="[A-Za-zñÑáéíóúÁÉÍÓÚ ]+" placeholder="Ciudad" required>
+                                <select id="ciudad" name="ciudad" class="form-control" required />
+                                <option value="">Selecciona una ciudad...</option>
+                                <option value="santiago">Santiago</option>
+                                <option value="valparaiso">Valparaíso</option>
+                                <option value="concepcion">Concepción</option>
+                                </select>
                             </div>
+                        </div>
+
+                        <div class="row">
                             <div class="col-md-12 mt-3">
                                 <label class="form-label" for="comuna">Comuna</label>
-                                <input type="text" id="comuna" name="comuna" class="form-control" placeholder="Comuna"
-                                    pattern="[A-Za-zñÑáéíóúÁÉÍÓÚ ]+" required>
+                                <select id="comuna" name="comuna" class="form-control" required />
+                                <option value="">Selecciona una comuna...</option>
+                                <option value="coronel">Coronel</option>
+                                <option value="hualpen">Hualpene</option>
+                                <option value="chiguayante">Chiguayante</option>
+                                <option value="lota">Lota ql feo</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12 mt-3">
+                                <label class="form-label" for="direccion">Dirección</label>
+                                <input type="text" id="direccion" name="direccion" class="form-control"
+                                    placeholder="Dirección" pattern=".*\d.*" required minlength="3" maxlength="20">
+                                <div class="invalid-feedback">Ejemplo: Paicaví 516</div>
                             </div>
                         </div>
 
