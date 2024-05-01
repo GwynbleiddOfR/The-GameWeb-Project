@@ -103,3 +103,23 @@ function validarYCerrarModalConfirmarEliminacionJuego(event) {
         $('#modalConfirmarEliminacionJuego').modal('hide');
     }
 }
+
+// ********** FORMULARIO DE SUSPENSION DE USUARIO **********
+function cancelarSuspensionUsuario() {
+    $('#modalCancelarSuspensionUsuario').modal('hide');
+}
+
+function confirmarSuspensionUsuario() {
+    $('#modalConfirmarSuspensionUsuario').modal('hide');
+}
+
+function validarYCerrarModalConfirmarSuspensionUsuario(event) {
+    let formDeleteGame = document.getElementById('formSuspendUser');
+
+    if (!formDeleteGame.checkValidity()) {
+        alert('Por favor, completa todos los campos requeridos antes de suspender al usuario.');
+        event.preventDefault();
+    } else {
+        $('#modalConfirmarSuspensionUsuario').modal('hide');
+    }
+}
