@@ -51,7 +51,7 @@ function primeraLetraMayuscula(id) {
     });
 }
 
-// Aplicar la funcion a ambos campos
+// Aplicar la funcions
 primeraLetraMayuscula('nombre');
 primeraLetraMayuscula('apellido');
 
@@ -143,3 +143,54 @@ function validarYCerrarModalConfirmarEliminacionUsuario(event) {
         $('#modalConfirmarEliminacionUsuario').modal('hide');
     }
 }
+
+// ********** CARRITO **********
+// Espacio cada 4 numeros
+function espaciarNumeros(input) {
+    if (typeof validarLongitudInput === "function") {
+      validarLongitudInput();
+    }
+  
+    let valor = input.value.replace(/\D/g, '');
+    
+    let nuevoValor = '';
+    for (let i = 0; i < valor.length; i++) {
+      if (i > 0 && i % 4 === 0) {
+        nuevoValor += ' ';
+      }
+      nuevoValor += valor[i];
+    }
+
+    input.value = nuevoValor;
+}
+
+// Formato fecha
+function validarFecha(input) {
+    // Expresión regular para el formato MM/YYYY
+    let formatoFecha = /^(0[1-9]|1[0-2])\/\d{4}$/;
+  
+    // Obtener el valor del input y eliminar caracteres no numéricos y barras adicionales
+    let valor = input.value.replace(/\D/g, '').replace(/(.{2})/, '$1/');
+  
+    // Limitar la longitud del valor a 7 caracteres (MM/YYYY)
+    valor = valor.substring(0, 7);
+  
+    // Insertar la barra diagonal después de los dos primeros números
+    if (valor.length === 2) {
+      valor += '/';
+    }
+  
+    // Actualizar el valor del input
+    input.value = valor;
+  
+    // Verificar si el valor cumple con el formato
+    if (!formatoFecha.test(valor) && valor.length === 7) {
+      // Si no cumple, mostrar un mensaje de error o tomar alguna acción
+      console.log('Formato incorrecto, debe ser MM/YYYY');
+    }
+  }
+
+// Solo numeros
+function soloNumeros(input) {
+    input.value = input.value.replace(/[^0-9]/g, '');
+  }
