@@ -114,12 +114,32 @@ function confirmarSuspensionUsuario() {
 }
 
 function validarYCerrarModalConfirmarSuspensionUsuario(event) {
-    let formDeleteGame = document.getElementById('formSuspendUser');
+    let formSuspendUser = document.getElementById('formSuspendUser');
 
-    if (!formDeleteGame.checkValidity()) {
+    if (!formSuspendUser.checkValidity()) {
         alert('Por favor, completa todos los campos requeridos antes de suspender al usuario.');
         event.preventDefault();
     } else {
         $('#modalConfirmarSuspensionUsuario').modal('hide');
+    }
+}
+
+// ********** FORMULARIO DE ELIMINACION DE USUARIO **********
+function cancelarEliminacionUsuario() {
+    $('#modalCancelarEliminacionUsuario').modal('hide');
+}
+
+function confirmarEliminacionUsuario() {
+    $('#modalConfirmarEliminacionUsuario').modal('hide');
+}
+
+function validarYCerrarModalConfirmarEliminacionUsuario(event) {
+    let formDeleteUser = document.getElementById('formDeleteUser');
+
+    if (!formDeleteUser.checkValidity()) {
+        alert('Por favor, completa todos los campos requeridos antes de eliminar al usuario');
+        event.preventDefault();
+    } else {
+        $('#modalConfirmarEliminacionUsuario').modal('hide');
     }
 }
