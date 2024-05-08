@@ -23,22 +23,25 @@ function validarGender() {
 }
 
 // Validar contraseña
+document.getElementById("pass").addEventListener("keyup", validarPass);
+document.getElementById("rePass").addEventListener("keyup", validarPass);
+
 function validarPass() {
     let pass = document.getElementById("pass").value;
     let rePass = document.getElementById("rePass").value;
     let mensajePass = document.getElementById("mensajePass");
 
-    if (pass.length != 0) {
-        if (pass == rePass) {
-            document.getElementById("mensajePass").className = "text-success"
-            mensajePass.textContent = "";
-            return true;
-        }
-        else {
-            document.getElementById("mensajePass").className = "text-danger"
+    if (pass.length >= 8) {
+        if (pass === rePass) {
+            mensajePass.className = "text-success";
+            mensajePass.textContent = "Las contraseñas coinciden.";
+        } else {
+            mensajePass.className = "text-danger";
             mensajePass.textContent = "Las contraseñas no coinciden";
-            return false;
         }
+    } else {
+        mensajePass.className = "text-danger";
+        mensajePass.textContent = "La contraseña debe tener al menos 8 caracteres";
     }
 }
 
@@ -51,7 +54,7 @@ function primeraLetraMayuscula(id) {
     });
 }
 
-// Aplicar la funcions
+// Aplicar las funciones
 primeraLetraMayuscula('nombre');
 primeraLetraMayuscula('apellido');
 
