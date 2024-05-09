@@ -14,10 +14,12 @@
     <nav class="navbar navbar-expand-md bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand d-flex align-items-center" href="index.html">
-                <img src="img/whitewolf.png" alt="White Wolf Logo" style="margin-right: 10px;"> 
+                <img src="img/whitewolf.png" alt="White Wolf Logo" style="margin-right: 10px;">
                 <h4 class="text-white" style="margin: 0">White Wolf</h4>
             </a>
-            <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -45,7 +47,7 @@
 
                     <div class="user-icons d-flex mb-2">
                         <a href="carrito.html">
-                            <div class="cart"><i class="bi bi-cart-fill" style = "color:white;"></i></div>
+                            <div class="cart"><i class="bi bi-cart-fill" style="color:white;"></i></div>
                         </a>
                     </div>
                 </div>
@@ -98,30 +100,29 @@
 
                         <div class="row mb-4">
                             <div class="col-md-4 col-6 mb-3">
-                                <label class="mb-2 d-block">Cantidad</label>
-                                <div class="input-group mb-3" style="width: 170px;">
-                                    <button class="btn btn-white border border-secondary px-3" type="button"
-                                        id="button-addon1" data-mdb-ripple-color="dark">
-                                        <i class="bi bi-dash"></i>
-                                    </button>
-                                    <input type="text" class="form-control text-center border border-secondary"
-                                        placeholder="2" aria-label="Example text with button addon"
-                                        aria-describedby="button-addon1" />
-                                    <button class="btn btn-white border border-secondary px-3" type="button"
-                                        id="button-addon2" data-mdb-ripple-color="dark">
-                                        <i class="bi bi-plus"></i>
-                                    </button>
+                                <input type="number" placeholder="1" value="1" min="1" class="input-cantidad"
+                                    id="cantidadJuego" oninput="validarLongitudInput('cantidadJuego', 2)">
+
+                                <div class="btn-up-down">
+                                    <i class="fa-solid fa-chevron-up" id="up"></i>
+                                    <i class="fa-solid fa-chevron-down" id="down"></i>
+
                                 </div>
                             </div>
+                             
+
+                            <div class="col-md-8 col-6">
+                                <a href="carrito.html" class="btn btn-dark shadow-0"> <i class="bi bi-cart-fill"></i>
+                                    Agregar
+                                    al carrito </a>
+                            </div>
                         </div>
-                        <a href="carrito.html" class="btn btn-dark shadow-0"> <i class="bi bi-cart-fill"></i> Agregar
-                            al carrito </a>
-                    </div>
                 </main>
             </div>
         </div>
     </section>
-
+    <script src="js/scripts.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 </body>
 
 </html>
