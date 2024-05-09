@@ -103,6 +103,14 @@
   }
 }
 
+#precio::-webkit-inner-spin-button,
+#precio::-webkit-outer-spin-button,
+#numero-tarjeta::-webkit-inner-spin-button,
+#numero-tarjeta::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
 /* adminGames */
 @media (min-width: 992px) {
   #adminBuscarJuegos {
@@ -130,12 +138,11 @@
   border-color: #ced4da;
 }
 
-#precio::-webkit-inner-spin-button,
-#precio::-webkit-outer-spin-button,
-#numero-tarjeta::-webkit-inner-spin-button,
-#numero-tarjeta::-webkit-outer-spin-button{
-    -webkit-appearance: none;
-    margin: 0;
+#pass:valid, #pass.is-valid,
+#pass:invalid, #pass.is-invalid,
+#rePass:valid, #rePass.is-valid,
+#rePass:invalid, #rePass.is-invalid {
+  background-image: none;
 }
 
 /* User profile */

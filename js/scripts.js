@@ -34,14 +34,11 @@ function validarPass() {
     if (pass.length >= 8) {
         if (pass === rePass) {
             mensajePass.className = "text-success";
-            mensajePass.textContent = "Las contraseñas coinciden.";
+            mensajePass.textContent = "Las contraseñas coinciden ✅.";
         } else {
             mensajePass.className = "text-danger";
-            mensajePass.textContent = "Las contraseñas no coinciden";
+            mensajePass.textContent = "Las contraseñas no coinciden ❌.";
         }
-    } else {
-        mensajePass.className = "text-danger";
-        mensajePass.textContent = "La contraseña debe tener al menos 8 caracteres";
     }
 }
 
