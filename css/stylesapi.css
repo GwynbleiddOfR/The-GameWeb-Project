@@ -145,6 +145,32 @@
   background-image: none;
 }
 
+#pass:valid, #pass.is-valid {
+  border-color: #ced4da;
+}
+
+#pass:invalid, #pass.is-invalid {
+  border-color: #ced4da;
+}
+
+#pass:valid:focus, #pass.is-valid:focus, #pass:invalid:focus, #pass.is-invalid:focus {
+  border-color: black;
+  box-shadow: none;
+}
+
+#rePass:valid, #rePass.is-valid {
+  border-color: #ced4da;
+}
+
+#rePass:invalid, #rePass.is-invalid {
+  border-color: #ced4da;
+}
+
+#rePass:valid:focus, #rePass.is-valid:focus, #rePass:invalid:focus, #rePass.is-invalid:focus {
+  border-color: black;
+  box-shadow: none;
+}
+
 /* User profile */
 .alerta-email-copy,
 .alerta-tel-copy {
