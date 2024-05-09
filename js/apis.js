@@ -6,19 +6,15 @@ function copiarEmail() {
   
     navigator.clipboard.writeText(email)
       .then(() => {
-        // Obtiene la posición del icono de copiar relativa al contenedor '.card'
         const iconoPos = iconoCopiar.getBoundingClientRect();
         const cardPos = card.getBoundingClientRect();
   
-        // Posiciona la alerta en relación con el contenedor '.card'
         alerta.style.left = `${iconoPos.left - cardPos.left - 40}px`;
-        // Ajusta la posición 'top' para que la alerta aparezca más arriba del icono
-        alerta.style.top = `${iconoPos.top - cardPos.top - alerta.offsetHeight - 50}px`; // Aumenta la distancia arriba del icono
-  
-        // Muestra la alerta
+        alerta.style.top = `${iconoPos.top - cardPos.top - alerta.offsetHeight - 50}px`;
         alerta.style.display = 'block';
+
+        console.log('Correo electrónico copiado: ' + email);
   
-        // Oculta la alerta después de 2 segundos
         setTimeout(() => {
           alerta.style.display = 'none';
         }, 1000);
@@ -40,8 +36,9 @@ function copiarTelefono() {
         const cardPos = card.getBoundingClientRect();
         alerta.style.left = `${iconoPos.left - cardPos.left - 40}px`;
         alerta.style.top = `${iconoPos.top - cardPos.top - alerta.offsetHeight - 50}px`;
-
         alerta.style.display = 'block';
+
+        console.log('Correo electrónico copiado: ' + email);
   
         setTimeout(() => {
           alerta.style.display = 'none';
