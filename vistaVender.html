@@ -113,7 +113,7 @@
                                         <div data-mdb-input-init class="form-outline">
                                             <label class="form-label" for="precio">Precio</label>
                                             <input type="number" id="precio" name="precio" placeholder="$"
-                                                class="form-control form-control-lg" oninput="validarLongitudInput()"
+                                                class="form-control form-control-lg" oninput="validarLongitudInput('precio', 6)"
                                                 required min="0" max="999999" />
                                         </div>
                                     </div>
@@ -124,7 +124,7 @@
                                         <div data-mdb-input-init class="form-outline">
                                             <label class="form-label" for="copias">Número de copias</label>
                                             <input type="number" id="copias" name="copias" placeholder="N° de copias..."
-                                                class="form-control form-control-lg" oninput="validarLongitudInput()"
+                                                class="form-control form-control-lg" oninput="validarLongitudInput('copias', 2)"
                                                 required min="1" maxlength="3" />
                                         </div>
                                     </div>
