@@ -42,6 +42,19 @@ function validarPass() {
     }
 }
 
+function mostrarPass(){
+    let contra = document.getElementById("pass");
+    let reContra = document.getElementById("rePass");
+
+    if (contra.type === "password") {
+        contra.type = "text";
+        reContra.type = "text";
+    } else {
+        contra.type = "password";
+        reContra.type = "password";
+    }
+}
+
 document.getElementById('telefono').addEventListener('input', function (event) {
     this.value = this.value.replace(/[^0-9]/g, '');
 });
