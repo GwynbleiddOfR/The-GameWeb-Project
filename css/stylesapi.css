@@ -117,27 +117,38 @@
 }
 
 /* Register */
-/* Sobrescribir el color por defecto de Bootstrap para el label cuando no está seleccionado */
 .was-validated .form-check-input:not(:checked) + .form-check-label {
-  color: black; /* Color cuando no está seleccionado */
+  color: black;
 }
 
-/* Mantener el color verde de Bootstrap para cuando el input está seleccionado */
 .was-validated .form-check-input:checked + .form-check-label {
-  color: green; /* Color por defecto de Bootstrap cuando está seleccionado */
+  color: green;
 }
 
-/* Cambiar el estilo del botón de opción cuando no está seleccionado */
 .was-validated .form-check-input:not(:checked) {
-  background-color: #fff; /* Color de fondo blanco */
-  border-color: #ced4da; /* Color de borde por defecto de Bootstrap */
+  background-color: #fff; 
+  border-color: #ced4da;
 }
 
-/* Para ocultar las flechas en navegadores basados en WebKit como Chrome, Safari, etc. */
 #precio::-webkit-inner-spin-button,
 #precio::-webkit-outer-spin-button,
 #numero-tarjeta::-webkit-inner-spin-button,
 #numero-tarjeta::-webkit-outer-spin-button{
     -webkit-appearance: none;
     margin: 0;
+}
+
+/* User profile */
+.alerta-email-copy,
+.alerta-tel-copy {
+  padding: 10px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+  z-index: 1000;
+}
+
+.card {
+  position: relative;
 }
