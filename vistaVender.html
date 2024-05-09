@@ -114,7 +114,7 @@
                                             <label class="form-label" for="precio">Precio</label>
                                             <input type="number" id="precio" name="precio" placeholder="$"
                                                 class="form-control form-control-lg" oninput="validarLongitudInput()"
-                                                required min="1" max="999999" maxlength="6" />
+                                                required min="0" max="999999" />
                                         </div>
                                     </div>
                                 </div>
@@ -144,13 +144,13 @@
                                 <div class="row">
                                     <div class="col-md-12 mb-4">
                                         <label class="form-label" for="archivo">Subir imagen</label> <br>
-                                        <input class="form-control" type="file" required>
+                                        <input class="form-control" id="archivo" type="file" required>
                                         <div class="invalid-feedback">Agregue una imagen de su juego</div>
                                     </div>
                                 </div>
 
                                 <div class="d-grid">
-                                    <button type="submit" class="btn btn-dark btn-lg mb-3" data-bs-toggle="modal"
+                                    <button type="submit" id="botonVenta" class="btn btn-dark btn-lg mb-3" data-bs-toggle="modal"
                                     data-bs-target="#modalConfirmarVenta">Realizar venta</button>
                                     <button type="button" class="btn btn-danger btn-lg" data-bs-toggle="modal"
                                     data-bs-target="#modalCancelarVenta">Cancelar</button>

@@ -60,11 +60,25 @@ primeraLetraMayuscula('apellido');
 
 // Funcion que permite usar el maxlength en type number
 function validarLongitudInput() {
-    document.querySelectorAll('input[type="number"]').forEach(input => {
-        input.oninput = () => {
-            if (input.value.length > input.maxLength) input.value = input.value.slice(0, input.maxLength);
-        };
-    });
+    var inputPrecio = document.getElementById('precio');
+    var valor = inputPrecio.value;
+
+    valor = valor.replace(/-/g, '');
+
+    if (valor.length > 6) {
+        valor = valor.slice(0, 6);
+    }
+
+    inputPrecio.value = valor;
+
+    var inputCopias = document.getElementById('copias');
+    var valorCopias = inputCopias.value;
+
+    if (valorCopias.length > 2) {
+        valorCopias = valorCopias.slice(0, 2);
+    }
+
+    inputCopias.value = valorCopias;
 }
 
 // ********** FORMULARIO DE VENTA **********
