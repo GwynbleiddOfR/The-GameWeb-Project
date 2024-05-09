@@ -93,70 +93,15 @@
                                 <div class="row">
                                     <div class="col-md-12 mb-4">
                                         <label class="form-label" for="archivo">Subir imagen</label> <br>
-                                        <input class="form-control" type="file" required>
+                                        <input class="form-control" type="file" id="archivo" name="archivo" required>
                                         <div class="invalid-feedback">Agregue una imagen para dar más detalles</div>
                                     </div>
                                 </div>
 
                                 <div class="d-grid">
-                                    <button type="submit" class="btn btn-dark btn-lg mb-3" data-bs-toggle="modal"
-                                        data-bs-target="#modalConfirmarEliminacionUsuario">Eliminar usuario</button>
-                                    <button type="button" class="btn btn-danger btn-lg" data-bs-toggle="modal"
-                                    data-bs-target="#modalCancelarEliminacionUsuario">Cancelar</button>
+                                    <button type="submit" class="btn btn-dark btn-lg mb-3">Eliminar usuario</button>
                                 </div>
                             </form>
-
-                            <!-- Modal cancelar eliminacion de usuario -->
-                            <div class="modal fade" id="modalCancelarEliminacionUsuario" tabindex="-1"
-                                aria-labelledby="modalCancelarEliminacionUsuario" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="modalCancelarEliminacionUsuarioLabel">Confirmar cancelación
-                                            </h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            ¿Seguro que quieres cancelar la eliminación de este usuario?
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-dark" data-bs-dismiss="modal">No,
-                                                conservar</button>
-                                            <a href="admin.html">
-                                                <button type="button" class="btn btn-danger"">Sí,
-                                                    cancelar</button>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Modal confirmar eliminacion de usuario -->
-                            <div class="modal fade" id="modalConfirmarEliminacionUsuario" tabindex="-1"
-                                aria-labelledby="modalConfirmarEliminacionUsuario" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="modalConfirmarEliminacionUsuarioLabel">Confirmar eliminación
-                                            </h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            ¿Seguro que quieres eliminar este usuario?
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-dark" data-bs-dismiss="modal">No,
-                                                me falta algo</button>
-
-                                            <button type="submit" form="formDeleteUser" class="btn btn-success" 
-                                                onclick="validarYCerrarModalConfirmarEliminacionUsuario(event)">Si, quiero eliminar a este usuario
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>

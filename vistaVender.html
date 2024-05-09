@@ -144,72 +144,17 @@
                                 <div class="row">
                                     <div class="col-md-12 mb-4">
                                         <label class="form-label" for="archivo">Subir imagen</label> <br>
-                                        <input class="form-control" id="archivo" type="file" required>
+                                        <input class="form-control" id="archivo" name="archivo" type="file" required>
                                         <div class="invalid-feedback">Agregue una imagen de su juego</div>
                                     </div>
                                 </div>
 
                                 <div class="d-grid">
-                                    <button type="submit" id="botonVenta" class="btn btn-dark btn-lg mb-3" data-bs-toggle="modal"
-                                    data-bs-target="#modalConfirmarVenta">Realizar venta</button>
-                                    <button type="button" class="btn btn-danger btn-lg" data-bs-toggle="modal"
-                                    data-bs-target="#modalCancelarVenta">Cancelar</button>
+                                    <button type="submit" id="botonVenta" class="btn btn-dark btn-lg mb-3">Realizar venta</button>
                                 </div>
 
                             
                             </form>
-
-                            <!-- Modal cancelar venta -->
-                            <div class="modal fade" id="modalCancelarVenta" tabindex="-1"
-                                aria-labelledby="modalCancelarVentaLabel" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="modalCancelarVentaLabel">Confirmar cancelación
-                                            </h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            ¿Seguro que quieres cancelar la venta?
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-dark" data-bs-dismiss="modal">No,
-                                                conservar</button>
-                                            <a href="userProfile.html">
-                                                <button type="button" class="btn btn-danger"">Sí,
-                                                    cancelar</button>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Modal confirmar venta -->
-                            <div class="modal fade" id="modalConfirmarVenta" tabindex="-1"
-                                aria-labelledby="modalConfirmarVenta" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="modalConfirmarVentaLabel">Confirmar venta
-                                            </h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            ¿Seguro que quieres publicar tu venta?
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-dark" data-bs-dismiss="modal">No,
-                                                me falta algo</button>
-
-                                            <button type="submit" form="formularioVenta" class="btn btn-success" 
-                                                onclick="validarYCerrarModalConfirmarVenta(event)">Si, quiero publicar la venta
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>

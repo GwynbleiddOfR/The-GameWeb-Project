@@ -59,7 +59,6 @@ document.getElementById('telefono').addEventListener('input', function (event) {
     this.value = this.value.replace(/[^0-9]/g, '');
 });
 
-
 // Primera letra de nombre, apellido, ciudad y comuna siempre en mayuscula
 function primeraLetraMayuscula(id) {
     let input = document.getElementById(id);
