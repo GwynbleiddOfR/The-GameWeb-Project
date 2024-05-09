@@ -38,7 +38,7 @@ function copiarTelefono() {
         alerta.style.top = `${iconoPos.top - cardPos.top - alerta.offsetHeight - 50}px`;
         alerta.style.display = 'block';
 
-        console.log('Correo electrónico copiado: ' + email);
+        console.log('Número de teléfono copiado: ' + telefono);
   
         setTimeout(() => {
           alerta.style.display = 'none';
