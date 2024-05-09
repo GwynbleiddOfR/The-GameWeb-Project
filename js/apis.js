@@ -48,6 +48,6 @@ function copiarTelefono() {
         }, 1000);
       })
       .catch(err => {
-        console.error('Error al copiar el correo electrónico:', err);
+        console.error('Error al copiar el número de teléfono:', err);
       });
 }
