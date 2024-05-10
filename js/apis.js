@@ -61,10 +61,17 @@ randomCatPhoto = (json) => {
     let photo = json[0].url;
     section.classList.add("cats");
 
+    // Verifica si ya existe una imagen y la elimina
+    const existingImage = document.querySelector(".random_cats");
+    if (existingImage) {
+        section.removeChild(existingImage);
+    }
+
     let image = document.createElement("img");
     image.src = photo;
     image.classList.add("random_cats");
-    image.alt = photo;
+    // Texto alternativo descriptivo para la imagen
+    image.alt = "Foto aleatoria de un gato";
     section.appendChild(image);
 };
 
@@ -76,6 +83,10 @@ async function getRandomCats() {
         console.log("JSON:", json);
         return randomCatPhoto(json);
     } catch (e) {
+        // Muestra un mensaje de error en la interfaz de usuario
+        const errorMessage = document.createElement("p");
+        errorMessage.textContent = "Error, el gatito no se puede mostrar en este momento.";
+        section.appendChild(errorMessage);
         console.log("Error, el gatito no se puede mostrar");
         console.log(e);
     }
