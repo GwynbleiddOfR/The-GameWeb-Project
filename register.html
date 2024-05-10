@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrarse</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/stylesapi.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body style="background-color: #eee;">
+    <!-- Encabezado (navbar) -->
+    <nav class="navbar navbar-expand-md bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="img/whitewolf.png" alt="White Wolf Logo" style="margin-right: 10px;">
+                <h4 class="text-white" style="margin: 0">White Wolf</h4>
+            </a>
+            <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active text-white" aria-current="page" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="userProfile.html">Mi perfil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="admin.html">Admin</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="login.html">Iniciar sesión</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="register.html">Registrarse</a>
+                    </li>
+                </ul>
+                <div class="search-and-icons">
+                    <form class="d-flex mb-2 me-4" role="search">
+                        <input class="form-control me-2" type="search" aria-label="Search">
+                    </form>
+
+                    <div class="user-icons d-flex mb-2">
+                        <a href="carrito.html">
+                            <div class="cart"><i class="bi bi-cart-fill" style="color:white;"></i></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- REGISTRO -->
+    <section class="vh-100">
+        <div class="container py-5 h-100 animate__animated animate__backInLeft">
+            <div class="row justify-content-center align-items-center h-100">
+                <div class="col-12 col-lg-9 col-xl-7">
+                    <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+                        <div class="card-body p-4 p-md-5">
+                            <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Registrate</h3>
+
+                            <form action="login.html" class="was-validated" method="post"
+                                onsubmit="return validarGender() && validarPass()">
+                                <div class="row">
+                                    <div class="col-md-6 mb-4">
+                                        <div data-mdb-input-init class="form-outline">
+                                            <label class="form-label" for="nombre">Nombre</label>
+                                            <input type="text" id="nombre" name="nombre" placeholder="Nombre..."
+                                                class="form-control form-control-lg" pattern="[A-Za-zñÑáéíóúÁÉÍÓÚ ]+"
+                                                required minlength="2" />
+                                            <div class="invalid-feedback">Al menos 2 caracteres, no se permiten números
+                                                ni caracteres especiales</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6 mb-4">
+                                        <div data-mdb-input-init class="form-outline">
+                                            <label class="form-label" for="apellido">Apellido</label>
+                                            <input type="text" id="apellido" name="apellido" placeholder="Apellido..."
+                                                class="form-control form-control-lg" pattern="[A-Za-zñÑáéíóúÁÉÍÓÚ ]+"
+                                                required minlength="2" />
+                                            <div class="invalid-feedback">Al menos 2 caracteres, no se permiten números
+                                                ni caracteres especiales</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6 mb-4 d-flex align-items-center">
+                                        <div data-mdb-input-init class="form-outline datepicker w-100">
+                                            <label for="userName" class="form-label">Nombre de usuario</label>
+                                            <input type="text" class="form-control form-control-lg" id="userName"
+                                                name="userName" placeholder="Nombre de usuario..." pattern="[^ ]+"
+                                                required minlength="5" maxlength="13" />
+                                            <div class="invalid-feedback">Al menos 5 caracteres y máximo 13, no se
+                                                permiten espacios</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6 mb-4">
+
+                                        <h6 class="mb-2 pb-1">Sexo:</h6>
+
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                                id="femaleGender" value="opcionFemenino" />
+                                            <label class="form-check-label" for="femaleGender">Femenino</label>
+                                        </div>
+
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                                id="maleGender" value="optionMasculino" />
+                                            <label class="form-check-label" for="maleGender">Masculino</label>
+                                        </div>
+
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                                id="otherGender" value="optionOtro" />
+                                            <label class="form-check-label" for="otherGender">Otro</label>
+                                        </div>
+                                        <div class="text-danger" id="mensajeGender"></div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-6 mb-4 pb-2">
+                                            <div data-mdb-input-init class="form-outline">
+                                                <label class="form-label" for="mail">Correo electrónico</label>
+                                                <input type="email" id="mail" name="mail"
+                                                    placeholder="Correo electrónico..."
+                                                    class="form-control form-control-lg"
+                                                    pattern="[^ ]+@[^ ]+\.(com|cl|org|net)" required />
+                                                <div class="invalid-feedback">Ejemplo: example@gmail.com</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6 mb-4 pb-2">
+                                            <div data-mdb-input-init class="form-outline">
+                                                <label class="form-label" for="telefono">Número de teléfono</label>
+                                                <input type="tel" id="telefono" name="telefono"
+                                                    placeholder="Teléfono..." class="form-control form-control-lg"
+                                                    pattern="[0-9]{8}" required minlength="8" maxlength="8" />
+                                                <div class="invalid-feedback">Ejemplo: 12345678</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6 mb-4 pb-2">
+                                            <div data-mdb-input-init class="form-outline">
+                                                <label class="form-label" for="ciudad">Ciudad</label>
+                                                <select id="ciudad" name="ciudad" class="form-control form-control-lg"
+                                                    required />
+                                                <option value="">Selecciona una ciudad...</option>
+                                                <option value="santiago">Santiago</option>
+                                                <option value="valparaiso">Valparaíso</option>
+                                                <option value="concepcion">Concepción</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6 mb-4 d-flex align-items-center">
+                                            <div data-mdb-input-init class="form-outline datepicker w-100">
+                                                <label for="direccion" class="form-label">Dirección</label>
+                                                <input type="text" class="form-control form-control-lg" id="direccion"
+                                                    name="direccion" placeholder="Dirección..." pattern=".*\d.*"
+                                                    required minlength="3" maxlength="20" />
+                                                <div class="invalid-feedback">Ejemplo: Paicaví 516</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6 mb-4 pb-2">
+                                            <div data-mdb-input-init class="form-outline">
+                                                <label class="form-label" for="pass">Contraseña</label>
+                                                <input type="password" id="pass" name="pass" placeholder="Contraseña..."
+                                                    class="form-control form-control-lg" required minlength="8" />
+                                                <div class="invalid-feedback">Al menos 8 caracteres.</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6 mb-4 pb-2">
+                                            <div data-mdb-input-init class="form-outline">
+                                                <label class="form-label" for="rePass">Repetir contraseña</label>
+                                                <input type="password" id="rePass" name="rePass"
+                                                    placeholder="Contraseña..." class="form-control form-control-lg"
+                                                    required minlength="8" />
+                                                <div class="text-danger" id="mensajePass"></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6 mb-4">
+                                            <input type="checkbox" onclick="mostrarPass()"> Ver contraseña
+                                        </div>
+                                        
+
+                                        <div class="d-grid">
+                                            <button type="submit" class="btn btn-dark btn-lg">Registrarse</button>
+                                        </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
