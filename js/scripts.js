@@ -23,24 +23,29 @@ function validarGender() {
 }
 
 // Validar contraseña
-document.getElementById("pass").addEventListener("keyup", validarPass);
-document.getElementById("rePass").addEventListener("keyup", validarPass);
-
-function validarPass() {
-    let pass = document.getElementById("pass").value;
-    let rePass = document.getElementById("rePass").value;
-    let mensajePass = document.getElementById("mensajePass");
-
-    if (pass.length >= 8) {
-        if (pass === rePass) {
-            mensajePass.className = "text-success";
-            mensajePass.textContent = "Las contraseñas coinciden ✅.";
-        } else {
-            mensajePass.className = "text-danger";
-            mensajePass.textContent = "Las contraseñas no coinciden ❌.";
-        }
+document.addEventListener("DOMContentLoaded", function() {
+    if (window.location.href.match(/register\.html$/)) {
+      // Añade los event listeners solo si la página es register.html
+      document.getElementById("pass").addEventListener("keyup", validarPass);
+      document.getElementById("rePass").addEventListener("keyup", validarPass);
     }
-}
+  });
+  
+  function validarPass() {
+      let pass = document.getElementById("pass").value;
+      let rePass = document.getElementById("rePass").value;
+      let mensajePass = document.getElementById("mensajePass");
+  
+      if (pass.length >= 8) {
+          if (pass === rePass) {
+              mensajePass.className = "text-success";
+              mensajePass.textContent = "Las contraseñas coinciden ✅.";
+          } else {
+              mensajePass.className = "text-danger";
+              mensajePass.textContent = "Las contraseñas no coinciden ❌.";
+          }
+      }
+  }  
 
 function mostrarPass(){
     let contra = document.getElementById("pass");
@@ -86,106 +91,7 @@ function validarLongitudInput(inputId, maxLength) {
     inputElement.value = valor;
 }
 
-// ********** FORMULARIO DE VENTA **********
-function cancelarVenta() {
-    $('#modalCancelarVenta').modal('hide');
-}
-
-function confirmarVenta() {
-    $('#modalConfirmarVenta').modal('hide');
-}
-
-function validarYCerrarModalConfirmarVenta(event) {
-    let formularioVenta = document.getElementById('formularioVenta');
-
-    if (!formularioVenta.checkValidity()) {
-        alert('Por favor, completa todos los campos requeridos antes de publicar la venta.');
-        event.preventDefault();
-    } else {
-        $('#modalConfirmarVenta').modal('hide');
-    }
-}
-
-// ********** FORMULARIO DE ELIMINACION DE JUEGO **********
-function cancelarElimiacionJuego() {
-    $('#modalCancelarEliminacionJuego').modal('hide');
-}
-
-function confirmarEliminacionJuego() {
-    $('#modalConfirmarEliminacionJuego').modal('hide');
-}
-
-function validarYCerrarModalConfirmarEliminacionJuego(event) {
-    let formDeleteGame = document.getElementById('formDeleteGame');
-
-    if (!formDeleteGame.checkValidity()) {
-        alert('Por favor, completa todos los campos requeridos antes de eliminar el juego.');
-        event.preventDefault();
-    } else {
-        $('#modalConfirmarEliminacionJuego').modal('hide');
-    }
-}
-
-// ********** FORMULARIO DE SUSPENSION DE USUARIO **********
-function cancelarSuspensionUsuario() {
-    $('#modalCancelarSuspensionUsuario').modal('hide');
-}
-
-function confirmarSuspensionUsuario() {
-    $('#modalConfirmarSuspensionUsuario').modal('hide');
-}
-
-function validarYCerrarModalConfirmarSuspensionUsuario(event) {
-    let formSuspendUser = document.getElementById('formSuspendUser');
-
-    if (!formSuspendUser.checkValidity()) {
-        alert('Por favor, completa todos los campos requeridos antes de suspender al usuario.');
-        event.preventDefault();
-    } else {
-        $('#modalConfirmarSuspensionUsuario').modal('hide');
-    }
-}
-
-// ********** FORMULARIO DE ELIMINACION DE USUARIO **********
-function cancelarEliminacionUsuario() {
-    $('#modalCancelarEliminacionUsuario').modal('hide');
-}
-
-function confirmarEliminacionUsuario() {
-    $('#modalConfirmarEliminacionUsuario').modal('hide');
-}
-
-function validarYCerrarModalConfirmarEliminacionUsuario(event) {
-    let formDeleteUser = document.getElementById('formDeleteUser');
-
-    if (!formDeleteUser.checkValidity()) {
-        alert('Por favor, completa todos los campos requeridos antes de eliminar al usuario');
-        event.preventDefault();
-    } else {
-        $('#modalConfirmarEliminacionUsuario').modal('hide');
-    }
-}
-
 // ********** CARRITO **********
-// Espacio cada 4 numeros
-function espaciarNumeros(input) {
-    if (typeof validarLongitudInput === "function") {
-      validarLongitudInput();
-    }
-  
-    let valor = input.value.replace(/\D/g, '');
-    
-    let nuevoValor = '';
-    for (let i = 0; i < valor.length; i++) {
-      if (i > 0 && i % 4 === 0) {
-        nuevoValor += ' ';
-      }
-      nuevoValor += valor[i];
-    }
-
-    input.value = nuevoValor;
-}
-
 // Formato fecha
 function validarFecha(input) {
     let formatoFecha = /^(0[1-9]|1[0-2])\/\d{4}$/;
